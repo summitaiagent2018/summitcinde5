@@ -64,7 +64,7 @@ app.intent('Default Welcome Intent', conv =>
     if(conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT'))
     {
         console.log("Inside Welcome Intent");
-        conv.ask(new SignIn('To get your account details'));
+        conv.ask(new SignIn(config.get('responseMessages.signInMsg')));
     }
     else
     {
